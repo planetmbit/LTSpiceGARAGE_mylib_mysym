@@ -1,0 +1,70 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -48 64 -48 -64
+LINE Normal 64 0 -48 64
+LINE Normal -48 -64 64 0
+LINE Normal -42 -32 -24 -32
+LINE Normal -32 23 -32 41
+LINE Normal -41 32 -23 32
+LINE Normal -124 88 -128 96
+LINE Normal -116 104 -124 88
+LINE Normal -116 104 -108 88
+LINE Normal -100 104 -108 88
+LINE Normal -96 96 -100 104
+LINE Normal -80 32 -48 32
+LINE Normal -144 96 -128 96
+LINE Normal 80 0 80 -96
+LINE Normal -96 96 -8 96
+LINE Normal -4 88 -8 96
+LINE Normal 4 104 -4 88
+LINE Normal 4 104 12 88
+LINE Normal 20 104 12 88
+LINE Normal 24 96 20 104
+LINE Normal 144 0 64 0
+LINE Normal -4 -104 -8 -96
+LINE Normal 4 -88 -4 -104
+LINE Normal 4 -88 12 -104
+LINE Normal 20 -88 12 -104
+LINE Normal 24 -96 20 -88
+LINE Normal 24 -96 80 -96
+LINE Normal -80 -96 -8 -96
+LINE Normal -144 -96 -128 -96
+LINE Normal -124 -104 -128 -96
+LINE Normal -116 -88 -124 -104
+LINE Normal -116 -88 -108 -104
+LINE Normal -100 -88 -108 -104
+LINE Normal -96 -96 -100 -88
+LINE Normal -80 -96 -96 -96
+LINE Normal 144 96 24 96
+LINE Normal -80 32 -80 96
+LINE Normal -82 -32 -48 -32
+LINE Normal -81 -96 -81 -32
+LINE Normal -144 -96 -192 -96
+LINE Normal -144 96 -192 96
+RECTANGLE Normal 144 144 -192 -144
+CIRCLE Normal 81 -1 79 1
+CIRCLE Normal 82 -2 78 2
+CIRCLE Normal 83 -3 77 3
+WINDOW 0 64 -144 Bottom 2
+WINDOW 3 64 144 Top 2
+SYMATTR Value INA199A1
+SYMATTR Prefix X
+SYMATTR ModelFile mylib\ina199a1.lib
+PIN -192 96 LEFT 8
+PINATTR PinName IN+
+PINATTR SpiceOrder 1
+PIN -192 -96 LEFT 8
+PINATTR PinName IN-
+PINATTR SpiceOrder 2
+PIN -32 -144 TOP 8
+PINATTR PinName +V
+PINATTR SpiceOrder 3
+PIN -32 144 BOTTOM 8
+PINATTR PinName GND
+PINATTR SpiceOrder 4
+PIN 144 0 RIGHT 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 5
+PIN 144 96 RIGHT 8
+PINATTR PinName REF
+PINATTR SpiceOrder 6

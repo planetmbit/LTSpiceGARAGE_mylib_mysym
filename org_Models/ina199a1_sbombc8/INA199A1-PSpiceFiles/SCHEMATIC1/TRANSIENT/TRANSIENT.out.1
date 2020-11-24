@@ -1,0 +1,121 @@
+
+**** 04/29/20 12:18:13 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-TRANSIENT"  [ C:\Macromodels\PSpice Library\^INA199\INA199A1_PSpice\ina199a1-pspicefiles\schematic1\transien
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "TRANSIENT.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ina199a1.lib" 
+* From [PSPICE NETLIST] section of C:\Users\a0282827\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 300u  0 300n SKIPBP 
+.OPTIONS ADVCONV
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INA199A1
+V_Vcc         VCC 0 5Vdc
+R_R2         0 OUT  10k TC=0,0 
+V_Vcm         INP 0 12Vdc
+I_I1         INN 0 DC 0Adc AC 0Aac
++PULSE -8 8 0 1n 1n 0.05m 0.1m
+R_R1         INN INP  10m TC=0,0 
+E_E2         VREF 0 VCC 0 0.5
+X_U1         INP INN VCC 0 OUT VREF INA199A1
+
+**** RESUMING TRANSIENT.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file ina199a1.ind for library file ina199a1.lib.
+
+INFO(ORPSIM-15422): Making new index file ina199a1.ind for library file ina199a1.lib.
+
+Index has 22 entries from 1 file(s).
+
+**** FROM LIBRARY ../../../ina199a1.lib ****
+.SUBCKT D_Z26V_INA199A1 1 2
+D1 1 2  D_26V
+CD 1 2 100F
+.MODEL D_26V D( IS=1P N=0.52 BV=26.3 IBV=5.0M RS=10 )
+.ENDS D_Z26V 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+**** FROM LIBRARY ../../../ina199a1.lib ****
+.SUBCKT D_D_INA199A1 1 2
+D1 1 2  DD
+.MODEL DD D( IS=0.9E-18 N=1.0 )
+.ENDS D_D 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT DRVMOS_1_INA199A1 D G S
+M6 D G S S DRVMOS
+.MODEL DRVMOS NMOS LEVEL=1 L=1.0U W=55U KP=100U VTO=1.0 RS=10.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVMOS_1 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT D_D_1_INA199A1 1 2
+D1 1 2  DD
+.MODEL DD D( IS=10F N=0.1 RS=1 )
+.ENDS D_D_1 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT DRVPMOS_INA199A1 D G S B
+M1 D G S B DRVPMOS
+.MODEL DRVPMOS PMOS LEVEL=1 L=1.0U W=1.9U KP=100U VTO=-1.0 RS=1.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVPMOS 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT DRVPMOS_1_INA199A1  D G S B
+M1 D G S B DRVPMOS
+.MODEL DRVPMOS PMOS LEVEL=1 L=1.0U W=95U KP=100U VTO=-1.0 RS=10.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVPMOS_1 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT DRVMOS_INA199A1 D G S
+*                D G S
+M6 D G S S DRVMOS
+.MODEL DRVMOS NMOS LEVEL=1 L=1.0U W=1.1U KP=100U VTO=1.0 RS=1.0 LAMBDA=20E-3 PHI=3.3 
+.ENDS DRVMOS 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT D_DB1_INA199A1 1 2
+D1 1 2  DD
+CD 1 2 1P
+.MODEL DD D( IS=1P N=0.5 RS=1 )
+.ENDS D_DB1 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+
+.SUBCKT Q_NMOS_INA199A1 D G S
+MNI2 D G S S Q_NMOS
+.MODEL Q_NMOS NMOS LEVEL=1 L=1.0U W=73.1461U KP=100.0U VTO=0.7
+.ENDS Q_NMOS 
+------$
+ERROR(ORPSIM-16362): Name on .ENDS does not match .SUBCKT
+

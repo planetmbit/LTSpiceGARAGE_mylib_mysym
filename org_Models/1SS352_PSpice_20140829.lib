@@ -1,0 +1,38 @@
+*********************************************************************
+*  TOSHIBA CORPORATION SEMICONDUCTOR & STORAGE PRODUCTS COMPANY
+*  Date                 : 27/05/2014
+*  File name            : 1SS352.lib
+*  Part Number          : 1SS352
+*  Parameter ver.       : Ver.1
+*  Simulator            : PSPICE
+*  Model call name      : DIODE_1SS352
+*  TNOM                 : 25 degree
+*********************************************************************
+
+.SUBCKT DIODE_1SS352 1 2
+D1 1 2 diode
+C0 1 2 3.2821e-13
+.MODEL diode D
++ IS = 8.63e-10
++ N = 1.7569
++ ISR = 1.1536e-10
++ NR = 2.0247
++ BV = 80
++ IBV = 5e-07
++ RS = 1.308
++ CJO = 1.041e-13
++ VJ = 1.5643
++ M = 0.86221
++ FC = 0.5
++ TT = 1.52e-08
++ EG = 1.11
++ XTI = 3.4702
++ AF = 1
++ KF = 0
++ NBV = 1
++ IBVL = 0
++ NBVL = 1
++ TNOM = 25
+.ends
+
+

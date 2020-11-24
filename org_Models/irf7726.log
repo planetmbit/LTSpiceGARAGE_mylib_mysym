@@ -1,0 +1,4 @@
+Stray ".ends" card: .ends irf7726
+Circuit: .SUBCKT irf7726 1 2 3
+
+Fatal Error: No analysis request found.
